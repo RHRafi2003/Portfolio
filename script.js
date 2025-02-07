@@ -1,25 +1,23 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const themeToggle = document.getElementById("theme-toggle");
-    const body = document.body;
+// Theme Toggle
+const themeToggle = document.getElementById('theme-toggle');
+const body = document.body;
 
-    // Check stored theme preference
-    if (localStorage.getItem("theme") === "dark") {
-        body.classList.add("dark-mode");
-        themeToggle.textContent = "☀️ Light Mode";
-    } else {
-        themeToggle.textContent = "🌙 Dark Mode";
-    }
+themeToggle.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    themeToggle.textContent = body.classList.contains('dark-mode') ? "☀️ Switch Theme" : "🌙 Switch Theme";
+});
 
-    // Theme Toggle Click Event
-    themeToggle.addEventListener("click", () => {
-        body.classList.toggle("dark-mode");
+// Scroll Animation
+const sections = document.querySelectorAll('.section');
 
-        if (body.classList.contains("dark-mode")) {
-            localStorage.setItem("theme", "dark");
-            themeToggle.textContent = "☀️ Light Mode";
-        } else {
-            localStorage.setItem("theme", "light");
-            themeToggle.textContent = "🌙 Dark Mode";
+const revealSections = () => {
+    sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+        if (sectionTop < window.innerHeight - 100) {
+            section.classList.add('fade-in');
         }
     });
-});
+};
+
+window.addEventListener('scroll', revealSections);
+window.addEventListener('load', revealSections);
