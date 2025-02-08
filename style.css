@@ -3,54 +3,46 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
-    color: #333;
+    background-color: #212121; /* Dark background for contrast */
+    color: #f1f1f1; /* Light text for visibility */
     transition: background-color 0.3s, color 0.3s;
-    scroll-behavior: smooth;
 }
 
 /* Dark Mode */
 body.dark-mode {
     background-color: #121212;
-    color: #ffffff;
+    color: #e0e0e0;
 }
 
-.dark-mode nav, .dark-mode footer {
-    background-color: #1e1e1e;
+.dark-mode nav {
+    background-color: #1c1c1c;
 }
 
 .dark-mode a {
-    color: #ffffff;
+    color: #e0e0e0;
+}
+
+.dark-mode footer {
+    background-color: #1c1c1c;
 }
 
 /* Header Section */
 header {
     text-align: center;
-    padding: 30px;
-    background: linear-gradient(135deg, #007bff, #00c6ff);
+    padding: 40px;
+    background: linear-gradient(135deg, #ff5722, #d32f2f); /* Bold red gradient */
     color: white;
 }
 
 .profile-pic {
-    width: 160px;
-    height: 160px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
-    border: 4px solid white;
-    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border: 5px solid white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-.profile-pic:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
-}
-
-.subtitle {
-    font-size: 20px;
-    font-weight: 500;
-}
-
-/* Typing Effect */
+/* Typing Effect Cursor */
 .cursor {
     font-weight: bold;
     color: white;
@@ -66,8 +58,8 @@ header {
 nav {
     display: flex;
     justify-content: center;
-    background-color: #007bff;
-    padding: 10px 0;
+    background-color: #1976d2; /* Bold blue */
+    padding: 12px 0;
     position: sticky;
     top: 0;
     width: 100%;
@@ -90,7 +82,7 @@ nav ul li a {
     color: white;
     font-size: 18px;
     font-weight: bold;
-    padding: 10px 15px;
+    padding: 12px 18px;
     transition: 0.3s;
 }
 
@@ -106,7 +98,9 @@ nav ul li a:hover {
     margin: auto;
     opacity: 0;
     transform: translateY(30px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    background-color: #333333; /* Dark background for sections */
+    border-radius: 8px;
 }
 
 .section.visible {
@@ -116,30 +110,34 @@ nav ul li a:hover {
 
 /* Buttons */
 button {
-    background-color: #0056b3;
+    background-color: #4caf50; /* Vibrant green */
     color: white;
     font-size: 16px;
     border: none;
-    padding: 10px 15px;
+    padding: 12px 20px;
     cursor: pointer;
     border-radius: 5px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: 0.3s;
     margin: 10px 5px;
 }
 
 button:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    background-color: #388e3c; /* Darker green */
 }
 
+/* Dark Mode Button */
 #theme-toggle {
-    background-color: #222;
+    background-color: #212121;
     color: white;
+}
+
+#download-cv:hover {
+    background-color: #388e3c;
 }
 
 /* Contact Section */
 #contact a {
-    color: #007bff;
+    color: #ff5722; /* Bold orange */
     text-decoration: none;
     font-weight: bold;
 }
@@ -152,13 +150,15 @@ button:hover {
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #007bff;
+    background-color: #1976d2; /* Bold blue */
     color: white;
     font-size: 14px;
     margin-top: 30px;
 }
 
 /* Mobile Support Design (Media Queries) */
+
+/* For screens 768px or smaller */
 @media (max-width: 768px) {
     .container {
         padding: 15px;
@@ -166,6 +166,7 @@ footer {
 
     .profile-pic {
         width: 120px;
+        height: 120px;
     }
 
     header h1 {
@@ -177,6 +178,7 @@ footer {
     }
 
     nav ul {
+        display: flex;
         flex-direction: column;
         padding: 10px 0;
     }
@@ -193,11 +195,17 @@ footer {
     .section {
         padding: 30px;
     }
+
+    footer {
+        font-size: 12px;
+    }
 }
 
+/* For screens 480px or smaller */
 @media (max-width: 480px) {
     .profile-pic {
         width: 100px;
+        height: 100px;
     }
 
     header h1 {
@@ -214,5 +222,9 @@ footer {
 
     .section {
         padding: 20px;
+    }
+
+    footer {
+        font-size: 10px;
     }
 }
