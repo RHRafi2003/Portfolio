@@ -65,9 +65,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
     typeEffect();
-
-    // CV Download Functionality
-    document.getElementById("download-cv").addEventListener("click", function () {
         window.open("Md-Redowanul-Haq-Rafi-CV.pdf", "_blank");
     });
 });
