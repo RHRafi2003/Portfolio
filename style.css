@@ -48,7 +48,7 @@ header {
 .subtitle {
     font-size: 20px;
     font-weight: 500;
-}
+} /* Added missing closing brace */
 
 /* Typing Effect */
 .cursor {
