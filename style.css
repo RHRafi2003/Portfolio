@@ -200,44 +200,6 @@ footer {
     }
 }
 
-/* For screens 768px or smaller */
-@media (max-width: 768px) {
-    .container {
-        padding: 15px;
-    }
-
-    .profile-pic {
-        width: 120px;
-    }
-
-    header h1 {
-        font-size: 24px;
-    }
-
-    .subtitle {
-        font-size: 16px;
-    }
-
-    nav ul {
-        display: flex;
-        flex-direction: column;
-        padding: 10px 0;
-    }
-
-    nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
-
-    nav ul li a {
-        font-size: 16px;
-    }
-
-    .section {
-        padding: 30px;
-    }
-}
-
 /* For screens 480px or smaller */
 @media (max-width: 480px) {
     .profile-pic {
