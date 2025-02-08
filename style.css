@@ -171,6 +171,7 @@ footer {
     }
 
     .profile-pic {
+        height: 120px;
         width: 120px;
     }
 
@@ -203,6 +204,7 @@ footer {
 
 @media (max-width: 480px) {
     .profile-pic {
+        height: 100px;
         width: 100px;
     }
 
