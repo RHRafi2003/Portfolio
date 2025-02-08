@@ -48,7 +48,7 @@ header {
 .subtitle {
     font-size: 20px;
     font-weight: 500;
-} /* Added missing closing brace */
+}
 
 /* Typing Effect */
 .cursor {
@@ -135,15 +135,6 @@ button:hover {
 #theme-toggle {
     background-color: #222;
     color: white;
-}
-
-/* Download CV Button */
-#download-cv {
-    background-color: #28a745;
-}
-
-#download-cv:hover {
-    background-color: #1e7d32;
 }
 
 /* Contact Section */
