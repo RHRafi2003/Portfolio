@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
     
     // Typing Effect in Subtitle
     const typingText = document.getElementById("typing-text");
-    const textArray = ["CSE Student", "Aspiring Cybersecurity Expert", "Web Developer"];
+    const textArray = ["CSE Student", "Aspiring Cybersecurity Expert", "Tech Enthusiast"];
     let textIndex = 0, charIndex = 0, isErasing = false;
     
     function typeEffect() {
