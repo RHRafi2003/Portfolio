@@ -3,7 +3,7 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #ffffff; 
+    background-color: #ffffff; /* Default: White background */
     color: #333;
     transition: background-color 0.3s, color 0.3s;
     scroll-behavior: smooth;
@@ -11,7 +11,7 @@ body {
 
 /* Dark Mode */
 body.dark-mode {
-    background-color: #000000 !important; 
+    background-color: #000000 !important; /* Fully dark background */
     color: #ffffff !important;
 }
 
