@@ -65,6 +65,3 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
     typeEffect();
-        window.open("Md-Redowanul-Haq-Rafi-CV.pdf", "_blank");
-    });
-});
