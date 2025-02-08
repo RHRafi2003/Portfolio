@@ -134,15 +134,6 @@ button:hover {
     color: white;
 }
 
-/* Download CV Button */
-#download-cv {
-    background-color: #28a745;
-}
-
-#download-cv:hover {
-    background-color: #1e7d32;
-}
-
 /* Contact Section */
 #contact a {
     color: #007bff;
