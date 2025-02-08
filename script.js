@@ -25,7 +25,11 @@ document.addEventListener("DOMContentLoaded", function () {
         anchor.addEventListener("click", function (event) {
             event.preventDefault();
             const target = document.getElementById(this.getAttribute("href").substring(1));
-            const offset = 10; // Adjust this value based on your navbar height
+    
+            // Get Navbar Height Dynamically
+            const navHeight = document.querySelector("nav").offsetHeight;
+            const offset = navHeight + 10; // Add extra 10px for better spacing
+    
             if (target) {
                 window.scrollTo({
                     top: target.offsetTop - offset,
@@ -34,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     });
-
+    
     // Fade-in Effect on Scroll
     const fadeElements = document.querySelectorAll(".fade-in");
     const observer = new IntersectionObserver(entries => {
