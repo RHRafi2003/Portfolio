@@ -3,30 +3,30 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #ffffff; /* Default: White background */
-    color: #333;
+    background-color: #F5F7FA; /* Soft Gray-White */
+    color: #2C3E50; /* Deep Navy Blue */
     transition: background-color 0.3s, color 0.3s;
     scroll-behavior: smooth;
 }
 
 /* Dark Mode */
 body.dark-mode {
-    background-color: #000000 !important; /* Fully dark background */
-    color: #ffffff !important;
+    background-color: #2C3E50 !important; /* Deep Navy */
+    color: #ECF0F1 !important; /* Light Gray-White */
 }
 
 /* Dark mode for navigation and footer */
 .dark-mode nav, .dark-mode footer {
-    background-color: #1e1e1e;
+    background-color: #1E2A38;
 }
 
 .dark-mode a {
-    color: #ffffff;
+    color: #ECF0F1;
 }
 
 /* Button Default */
 button {
-    background-color: #0056b3;
+    background-color: #2980B9; /* Vibrant Blue */
     color: white;
     font-size: 16px;
     border: none;
@@ -37,25 +37,25 @@ button {
     margin: 10px 5px;
 }
 
-/* Light Mode Button Hover (White Background → Hover Black) */
+/* Light Mode Button Hover */
 button:hover {
-    background-color: black;
+    background-color: #1A5276; /* Dark Blue */
     color: white;
     transform: scale(1.05);
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Dark Mode Button Hover (Black Background → Hover White) */
+/* Dark Mode Button Hover */
 body.dark-mode button:hover {
-    background-color: white !important;
-    color: black !important;
+    background-color: #AED6F1 !important; /* Soft Blue */
+    color: #2C3E50 !important; /* Deep Navy */
 }
 
 /* Header Section */
 header {
     text-align: center;
     padding: 30px;
-    background: linear-gradient(135deg, #2182d1, #007bff);
+    background: linear-gradient(135deg, #1A5276, #2980B9);
     color: white;
 }
 
@@ -94,7 +94,7 @@ header {
 nav {
     display: flex;
     justify-content: center;
-    background-color:  #333;
+    background-color: #2C3E50;
     padding: 5px 0;
     position: sticky;
     top: 0;
@@ -123,7 +123,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #007BFF;
+    color: #2980B9;
 }
 
 /* Sections */
@@ -141,32 +141,9 @@ nav ul li a:hover {
     transform: translateY(0);
 }
 
-/* Buttons */
-button {
-    background-color: #0056b3;
-    color: white;
-    font-size: 16px;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin: 10px 5px;
-}
-
-button:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-#theme-toggle {
-    background-color: #222;
-    color: white;
-}
-
 /* Contact Section */
 #contact a {
-    color: #007bff;
+    color: #2980B9;
     text-decoration: none;
     font-weight: bold;
 }
@@ -179,7 +156,7 @@ button:hover {
 footer {
     text-align: center;
     padding: 5px;
-    background: #333;
+    background: #2C3E50;
     color: white;
     font-size: 14px;
     margin-top: 30px;
