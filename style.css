@@ -3,7 +3,7 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
+    background-color: #ffffff; 
     color: #333;
     transition: background-color 0.3s, color 0.3s;
     scroll-behavior: smooth;
@@ -11,10 +11,11 @@ body {
 
 /* Dark Mode */
 body.dark-mode {
-    background-color: #121212;
-    color: #ffffff;
+    background-color: #000000 !important; 
+    color: #ffffff !important;
 }
 
+/* Dark mode for navigation and footer */
 .dark-mode nav, .dark-mode footer {
     background-color: #1e1e1e;
 }
@@ -23,11 +24,38 @@ body.dark-mode {
     color: #ffffff;
 }
 
+/* Button Default */
+button {
+    background-color: #0056b3;
+    color: white;
+    font-size: 16px;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    margin: 10px 5px;
+}
+
+/* Light Mode Button Hover (White Background → Hover Black) */
+button:hover {
+    background-color: black;
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Dark Mode Button Hover (Black Background → Hover White) */
+body.dark-mode button:hover {
+    background-color: white !important;
+    color: black !important;
+}
+
 /* Header Section */
 header {
     text-align: center;
     padding: 30px;
-    background: linear-gradient(135deg, #007bff, #00c6ff);
+    background: linear-gradient(135deg, #2182d1, #007bff);
     color: white;
 }
 
@@ -48,7 +76,7 @@ header {
 .subtitle {
     font-size: 20px;
     font-weight: 500;
-} /* Added missing closing brace */
+} 
 
 /* Typing Effect */
 .cursor {
@@ -66,8 +94,8 @@ header {
 nav {
     display: flex;
     justify-content: center;
-    background-color: #007bff;
-    padding: 10px 0;
+    background-color:  #333;
+    padding: 5px 0;
     position: sticky;
     top: 0;
     width: 100%;
@@ -95,8 +123,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 5px;
+    color: #007BFF;
 }
 
 /* Sections */
@@ -137,15 +164,6 @@ button:hover {
     color: white;
 }
 
-/* Download CV Button */
-#download-cv {
-    background-color: #28a745;
-}
-
-#download-cv:hover {
-    background-color: #1e7d32;
-}
-
 /* Contact Section */
 #contact a {
     color: #007bff;
@@ -160,14 +178,14 @@ button:hover {
 /* Footer */
 footer {
     text-align: center;
-    padding: 20px;
-    background-color: #007bff;
+    padding: 5px;
+    background: #333;
     color: white;
     font-size: 14px;
     margin-top: 30px;
 }
 
-/* Mobile Support Design (Media Queries) */
+/* Mobile Support Design */
 @media (max-width: 768px) {
     .container {
         padding: 15px;
