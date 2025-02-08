@@ -1,69 +1,25 @@
-document.addEventListener("DOMContentLoaded", function () {
-    // Dark Mode Toggle with Local Storage
+document.addEventListener("DOMContentLoaded", () => {
     const themeToggle = document.getElementById("theme-toggle");
     const body = document.body;
-    
-    function updateTheme() {
-        if (localStorage.getItem("darkMode") === "enabled") {
-            body.classList.add("dark-mode");
+
+    // Check stored theme preference
+    if (localStorage.getItem("theme") === "dark") {
+        body.classList.add("dark-mode");
+        themeToggle.textContent = "☀️ Light Mode";
+    } else {
+        themeToggle.textContent = "🌙 Dark Mode";
+    }
+
+    // Theme Toggle Click Event
+    themeToggle.addEventListener("click", () => {
+        body.classList.toggle("dark-mode");
+
+        if (body.classList.contains("dark-mode")) {
+            localStorage.setItem("theme", "dark");
             themeToggle.textContent = "☀️ Light Mode";
         } else {
-            body.classList.remove("dark-mode");
+            localStorage.setItem("theme", "light");
             themeToggle.textContent = "🌙 Dark Mode";
         }
-    }
-    updateTheme();
-    
-    themeToggle.addEventListener("click", function () {
-        const isDarkMode = body.classList.toggle("dark-mode");
-        localStorage.setItem("darkMode", isDarkMode ? "enabled" : "disabled");
-        updateTheme();
     });
-    
-    // Smooth Scrolling
-    document.querySelectorAll("nav ul li a").forEach(anchor => {
-        anchor.addEventListener("click", function (event) {
-            event.preventDefault();
-            const target = document.getElementById(this.getAttribute("href").substring(1));
-            if (target) target.scrollIntoView({ behavior: "smooth" });
-        });
-    });
-
-    // Fade-in Effect on Scroll
-    const fadeElements = document.querySelectorAll(".fade-in");
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("visible");
-                observer.unobserve(entry.target); // Improve performance by unobserving
-            }
-        });
-    }, { threshold: 0.1 });
-    
-    fadeElements.forEach(element => observer.observe(element));
-    
-    // Typing Effect in Subtitle
-    const typingText = document.getElementById("typing-text");
-    const textArray = ["CSE Student", "Aspiring Cybersecurity Expert", "Tech Enthusiast"];
-    let textIndex = 0, charIndex = 0, isErasing = false;
-    
-    function typeEffect() {
-        if (!typingText) return;
-        if (!isErasing && charIndex < textArray[textIndex].length) {
-            typingText.textContent += textArray[textIndex][charIndex];
-            charIndex++;
-            setTimeout(typeEffect, 100);
-        } else if (!isErasing) {
-            setTimeout(() => { isErasing = true; typeEffect(); }, 2000);
-        } else if (isErasing && charIndex > 0) {
-            typingText.textContent = textArray[textIndex].substring(0, charIndex - 1);
-            charIndex--;
-            setTimeout(typeEffect, 50);
-        } else {
-            isErasing = false;
-            textIndex = (textIndex + 1) % textArray.length;
-            setTimeout(typeEffect, 500);
-        }
-    }
-    typeEffect();
 });
