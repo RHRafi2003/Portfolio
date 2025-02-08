@@ -1,129 +1,91 @@
 /* General Styles */
-* {
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    scroll-behavior: smooth;
+    background-color: #f4f4f4;
 }
 
-body {
-    font-family: 'Roboto', sans-serif;
-    background: #f4f4f4;
-    color: #333;
-    transition: background 0.3s, color 0.3s;
-}
-
-.dark-mode {
-    background: #121212;
-    color: #fff;
-}
-
-/* Container */
 .container {
-    text-align: center;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
     padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.profile-pic {
-    width: 150px;
-    border-radius: 50%;
-    margin-top: 10px;
-    border: 4px solid white;
-}
-
-/* Header */
 header {
-    background: #007BFF;
-    color: white;
+    background: #333;
+    color: #fff;
     padding: 20px 0;
+    text-align: center;
+}
+
+header .profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
 }
 
 header h1 {
-    font-size: 28px;
-    margin-top: 10px;
+    margin: 0;
 }
 
-.subtitle {
-    font-size: 18px;
-    font-weight: 300;
+header .subtitle {
+    font-size: 1.2em;
+    margin: 10px 0;
 }
 
-/* Theme Toggle Button */
-#theme-toggle {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    margin-top: 10px;
-    background: #fff;
+header #theme-toggle {
+    background: #555;
+    color: #fff;
     border: none;
-    border-radius: 5px;
-    transition: 0.3s;
+    padding: 10px 20px;
+    cursor: pointer;
 }
 
-#theme-toggle:hover {
-    background: #ddd;
-}
-
-/* Navigation */
 nav {
-    background: #333;
+    background: #444;
+    color: #fff;
+    padding: 10px 0;
     text-align: center;
-    padding: 10px;
 }
 
 nav ul {
     list-style: none;
+    padding: 0;
 }
 
 nav ul li {
     display: inline;
-    margin: 0 15px;
+    margin: 0 10px;
 }
 
 nav ul li a {
-    color: white;
+    color: #fff;
     text-decoration: none;
-    font-size: 18px;
-    transition: 0.3s;
 }
 
-nav ul li a:hover {
-    color: #007BFF;
-}
-
-/* Sections */
 .section {
-    padding: 50px;
-    max-width: 800px;
-    margin: auto;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.6s ease-in-out;
+    margin: 20px 0;
 }
 
-.section.fade-in {
-    opacity: 1;
-    transform: translateY(0);
+.section h2 {
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
 }
 
-/* Contact Links */
-a {
-    color: #007BFF;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* Footer */
 footer {
-    text-align: center;
-    padding: 15px;
     background: #333;
-    color: white;
-    margin-top: 20px;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
 /* Responsive Design */
 @media (max-width: 768px) {
