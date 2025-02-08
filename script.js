@@ -25,7 +25,13 @@ document.addEventListener("DOMContentLoaded", function () {
         anchor.addEventListener("click", function (event) {
             event.preventDefault();
             const target = document.getElementById(this.getAttribute("href").substring(1));
-            if (target) target.scrollIntoView({ behavior: "smooth" });
+            const offset = 80; // Adjust this value based on your navbar height
+            if (target) {
+                window.scrollTo({
+                    top: target.offsetTop - offset,
+                    behavior: "smooth"
+                });
+            }
         });
     });
 
