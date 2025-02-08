@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
         anchor.addEventListener("click", function (event) {
             event.preventDefault();
             const target = document.getElementById(this.getAttribute("href").substring(1));
-            const offset = 40; // Adjust this value based on your navbar height
+            const offset = 10; // Adjust this value based on your navbar height
             if (target) {
                 window.scrollTo({
                     top: target.offsetTop - offset,
